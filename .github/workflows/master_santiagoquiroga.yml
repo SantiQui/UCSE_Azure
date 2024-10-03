@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build UCSE_Azure/UCSE_Azure.csproj --configuration Release
+        run: dotnet build SantiQui/UCSE_Azure/UCSE_Azure.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish UCSE_Azure/UCSE_Azure.csproj -c Release -o "${{env.GITHUB_WORKSPACE}}\myapp"
+        run: dotnet publish SantiQui/UCSE_Azure/UCSE_Azure.csproj -c Release -o "${{env.GITHUB_WORKSPACE}}\myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
